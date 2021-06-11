@@ -1,0 +1,30 @@
+{
+  "name": "koa2-timeout",
+  "version": "0.0.1",
+  "description": "Timeout middleware for koa2",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkhuangfu/koa2-timeout.git"
+  },
+  "keywords": [
+    "koa2",
+    "response",
+    "timeout"
+  ],
+  "author": "jkhuangfu",
+  "license": "https://github.com/jkhuangfu/koa2-timeout/blob/main/LICENSE",
+  "bugs": {
+    "url": "https://github.com/jkhuangfu/koa2-timeout/issues"
+  },
+  "homepage": "https://github.com/jkhuangfu/koa2-timeout#readme",
+  "dependencies": {
+    "@types/koa": "^2.13.3",
+    "koa": "^2.13.1"
+  }
+}
