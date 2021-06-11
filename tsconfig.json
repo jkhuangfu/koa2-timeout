@@ -4,7 +4,7 @@
     "paths": {
       "@/*": ["./"]
     },
-    "target": "ES6",
+    "target": "ES2019",
     "module": "CommonJS",
     "removeComments": true,
     "outDir": "./dist",
