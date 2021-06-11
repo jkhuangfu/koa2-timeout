@@ -1,14 +1,14 @@
-# @koa/timeout
+# koa2-timeout
 
 Timeout middleware for koa.
 
 ## Installation
 
 ```shell
-$ npm install @koa/timeout
+$ npm install koa2-timeout
 ```
 
-## Hello @koa/timeout
+## Hello koa2-timeout
 
 ### use javaScript
 
