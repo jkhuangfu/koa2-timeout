@@ -1,5 +1,5 @@
 {
-  "name": "@koa/timeout",
+  "name": "koa2-timeout",
   "version": "0.0.2",
   "description": "Timeout middleware for koa2",
   "main": "./dist/index.js",

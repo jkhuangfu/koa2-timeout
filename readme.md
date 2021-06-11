@@ -14,7 +14,7 @@ $ npm install @koa/timeout
 
 ```js
 const Koa = require('koa');
-const { timeout } = require('@koa/timeout');
+const { timeout } = require('koa2-timeout');
 const app = new Koa();
 const timeOutHandler = ctx => {
   ctx.body = { code: 408, message: 'request timeout' };
@@ -37,7 +37,7 @@ app.listen(3000, () => {
 
 ```js
 import Koa from 'koa';
-import { timeout } from '@koa/timeout';
+import { timeout } from 'koa2-timeout';
 const timeOutHandler = (ctx: Koa.Context) => {
   ctx.body = { code: 408, message: 'request timeout' };
 };
