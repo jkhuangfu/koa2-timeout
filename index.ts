@@ -6,7 +6,11 @@ export function timeout(timeout: number = 4000, cb?: Function) {
     await Promise.race([
       new Promise<void>(resolve => {
         timer = setTimeout(() => {
-          cb && cb(ctx);
+          if (cb) {
+            cb(ctx);
+          } else {
+            throw new Error('request timeout');
+          }
           resolve();
         }, timeout);
       }),

@@ -7,7 +7,12 @@ function timeout(timeout = 4000, cb) {
         await Promise.race([
             new Promise(resolve => {
                 timer = setTimeout(() => {
-                    cb && cb(ctx);
+                    if (cb) {
+                        cb(ctx);
+                    }
+                    else {
+                        throw new Error('request timeout');
+                    }
                     resolve();
                 }, timeout);
             }),
