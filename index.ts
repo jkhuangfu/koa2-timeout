@@ -1,18 +1,18 @@
-import { Context, Next } from 'koa';
+import type { Context, Next } from 'koa';
 
-export function timeout(timeout: number = 4000, cb?: Function) {
+export function timeout(time: number = 4000, cb?: (ctx: Context, next: Next) => void) {
   let timer: NodeJS.Timeout;
   return async (ctx: Context, next: Next) => {
     await Promise.race([
       new Promise<void>(resolve => {
         timer = setTimeout(() => {
           if (cb) {
-            cb(ctx);
+            cb(ctx, next);
           } else {
             throw new Error('request timeout');
           }
           resolve();
-        }, timeout);
+        }, time);
       }),
       new Promise<void>(resolve => {
         (async () => {
