@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.timeout = void 0;
-function timeout(time = 4000, cb) {
+function timeout(time, cb) {
     let timer;
     return async (ctx, next) => {
         await Promise.race([
@@ -14,7 +14,7 @@ function timeout(time = 4000, cb) {
                         throw new Error('request timeout');
                     }
                     resolve();
-                }, time);
+                }, time || 4000);
             }),
             new Promise(resolve => {
                 (async () => {
