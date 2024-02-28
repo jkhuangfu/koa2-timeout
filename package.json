@@ -29,8 +29,7 @@
   },
   "homepage": "https://github.com/jkhuangfu/koa2-timeout#readme",
   "dependencies": {
-    "@types/koa": "*",
-    "koa": "^2.15.0"
+    "@types/koa": "*"
   },
   "devDependencies": {
     "@types/node": "^20.11.21",
