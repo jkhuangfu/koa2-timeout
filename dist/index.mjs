@@ -1,5 +1,3 @@
-'use strict';
-
 function timeout(time, cb) {
     let timer;
     return async (ctx, next) => {
@@ -26,4 +24,4 @@ function timeout(time, cb) {
     };
 }
 
-exports.timeout = timeout;
+export { timeout };

@@ -3,10 +3,15 @@
   "version": "0.1.6",
   "description": "Timeout middleware for koa2",
   "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./esm": "./dist/esm.mjs"
+  },
+  "type": "module",
   "types": "./types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -24,6 +29,11 @@
   },
   "homepage": "https://github.com/jkhuangfu/koa2-timeout#readme",
   "dependencies": {
-    "@types/koa": "*"
+    "@types/koa": "*",
+    "koa": "^2.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.21",
+    "rollup-plugin-typescript2": "^0.36.0"
   }
 }

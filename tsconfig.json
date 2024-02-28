@@ -1,19 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["./"]
-    },
-    "target": "ES2019",
-    "module": "CommonJS",
-    "removeComments": true,
-    "outDir": "./dist",
+    "target": "esnext",
+    "module": "esnext",
+    "outDir": "dist",
     "strict": true,
-    "allowSyntheticDefaultImports": false,
-    "esModuleInterop": false,
-    "forceConsistentCasingInFileNames": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "importHelpers": true
   },
-  "include": ["./*.ts", "types/**/*.d.ts"]
+  "include": ["src/**/*.ts"]
 }
