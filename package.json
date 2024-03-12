@@ -1,7 +1,12 @@
 {
   "name": "koa2-timeout",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Timeout middleware for koa2",
+  "files": [
+    "dist",
+    "types",
+    "package.json"
+  ],
   "main": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
